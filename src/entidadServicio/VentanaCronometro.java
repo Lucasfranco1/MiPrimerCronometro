@@ -56,7 +56,7 @@ public class VentanaCronometro extends JFrame implements ActionListener{
         label=new JLabel("00:00:00");
         label.setFont(new Font("Roboto", Font.PLAIN, 30));
         label.setBounds(47, 11, 137, 45);
-        label.setForeground(Color.decode("#ffffff"));
+        label.setForeground(Color.decode("#fffff"));
         getContentPane().add(label);
         
         btnIniciar=new JButton("Iniciar");
