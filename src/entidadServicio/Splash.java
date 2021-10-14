@@ -5,6 +5,7 @@
  */
 package entidadServicio;
 
+import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -36,13 +37,15 @@ public class Splash extends JDialog{
     
 
     private void initialize() {
-    lblSplashScreen=new JLabel("Splash Screen");
+    lblSplashScreen=new JLabel("1°Cronómetro");
     lblSplashScreen.setFont(new Font("Tahoma", Font.PLAIN,18));
+    lblSplashScreen.setForeground(Color.decode("#287233"));
     lblSplashScreen.setBounds(49, 11, 147, 32);
     getContentPane().add(lblSplashScreen);
     
     barraDeProgreso=new JProgressBar();
     barraDeProgreso.setBounds(26, 54, 229, 32);
+    barraDeProgreso.setForeground(Color.decode("#287233"));
     getContentPane().add(barraDeProgreso);
     
     porcentaje=new JLabel("0%");
@@ -72,7 +75,7 @@ public class Splash extends JDialog{
                         porcentaje2.setText(cad+x+"%");
                         x+=2;
                         cad+=".";
-                        Thread.sleep(100);
+                        Thread.sleep(30);
                         
                     }
                     dispose();
