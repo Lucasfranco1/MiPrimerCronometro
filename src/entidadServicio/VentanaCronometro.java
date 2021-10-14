@@ -39,12 +39,20 @@ public class VentanaCronometro extends JFrame implements ActionListener{
         initialize();
         setSize(228,120);
         getContentPane().setLayout(null);
+
         getContentPane().setBackground(Color.decode("#212b41"));
         setLocationRelativeTo(null);
         setResizable(false);
         Image icon = new ImageIcon(getClass().getResource("/imagenes/cronito.png")).getImage();
         setIconImage(icon);
 
+
+
+        getContentPane().setBackground(Color.decode("#ffffff"));
+        setLocationRelativeTo(null);
+        
+        
+        setResizable(false);
 
     }
     private void initialize(){
@@ -56,11 +64,16 @@ public class VentanaCronometro extends JFrame implements ActionListener{
         label=new JLabel("00:00:00");
         label.setFont(new Font("Roboto", Font.PLAIN, 30));
         label.setBounds(47, 11, 137, 45);
+
         label.setForeground(Color.decode("#fffff"));
+
+        label.setForeground(Color.decode("#287233"));
         getContentPane().add(label);
         
         btnIniciar=new JButton("Iniciar");
         btnIniciar.setBounds(119, 54, 89, 23);
+        btnIniciar.setBackground(Color.decode("#009975"));
+        btnIniciar.setForeground(Color.decode("#00000"));
         btnIniciar.addActionListener(this);
         btnIniciar.setBackground(Color.decode("#212b41"));
         btnIniciar.setForeground(Color.decode("#ffffff"));
@@ -68,6 +81,8 @@ public class VentanaCronometro extends JFrame implements ActionListener{
         
         btnDetener=new JButton("Parar");
         btnDetener.setBounds(10,54,89,23);
+        btnDetener.setBackground(Color.decode("#009975"));
+        btnDetener.setForeground(Color.decode("#00000"));
         btnDetener.addActionListener(this);
         btnDetener.setBackground(Color.decode("#212b41"));
         btnDetener.setForeground(Color.decode("#ffffff"));
