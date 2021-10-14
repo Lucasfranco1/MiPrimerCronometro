@@ -5,6 +5,7 @@
  */
 package entidadServicio;
 
+import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -26,6 +27,7 @@ public class Splash extends JDialog{
         setSize(300,150);
         setLocationRelativeTo(null);
         getContentPane().setLayout(null);
+        getContentPane().setBackground(Color.decode("#212b41"));
         setUndecorated(true);//quitar la decoración por defecto
         
         
@@ -36,22 +38,26 @@ public class Splash extends JDialog{
     
 
     private void initialize() {
-    lblSplashScreen=new JLabel("Splash Screen");
+    lblSplashScreen=new JLabel("1°Cronómetro");
     lblSplashScreen.setFont(new Font("Tahoma", Font.PLAIN,18));
+    lblSplashScreen.setForeground(Color.decode("#ffffff"));
     lblSplashScreen.setBounds(49, 11, 147, 32);
     getContentPane().add(lblSplashScreen);
     
     barraDeProgreso=new JProgressBar();
     barraDeProgreso.setBounds(26, 54, 229, 32);
+    barraDeProgreso.setForeground(Color.decode("#8DB600"));
     getContentPane().add(barraDeProgreso);
     
     porcentaje=new JLabel("0%");
     porcentaje.setFont(new Font("Tahoma",Font.PLAIN,14));
+    porcentaje.setForeground(Color.WHITE);
     porcentaje.setBounds(206, 23, 46, 14);
     getContentPane().add(porcentaje);
     
     porcentaje2=new JLabel("0%");
     porcentaje2.setFont(new Font("Tahoma",Font.PLAIN,14));
+    porcentaje2.setForeground(Color.decode("#ffffff"));
     porcentaje2.setBounds(26, 97, 264, 14);
     getContentPane().add(porcentaje2);
     
@@ -72,7 +78,7 @@ public class Splash extends JDialog{
                         porcentaje2.setText(cad+x+"%");
                         x+=2;
                         cad+=".";
-                        Thread.sleep(100);
+                        Thread.sleep(40);
                         
                     }
                     dispose();
