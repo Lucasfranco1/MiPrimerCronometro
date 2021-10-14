@@ -5,6 +5,7 @@
  */
 package entidadServicio;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -42,6 +43,7 @@ public class VentanaCronometro extends JFrame implements ActionListener{
         label=new JLabel("00:00:00");
         label.setFont(new Font("Roboto", Font.PLAIN, 30));
         label.setBounds(47, 11, 137, 45);
+        label.setBackground(Color.yellow);
         getContentPane().add(label);
         
         btnIniciar=new JButton("Iniciar");
